@@ -1,0 +1,15 @@
+server:
+  port: 8088
+
+keycloak:
+  realm: my_realm
+  auth-server-url: http://localhost:8080
+  resource: my_client
+  public-client: true
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}/protocol/openid-connect/certs
+
