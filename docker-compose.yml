@@ -11,12 +11,12 @@ services:
     ports:
       - "8080:8080"
 
-  spring-app:
-    build: .
-    container_name: spring-keycloak-demo
-    ports:
-      - "8081:8081"
-    environment:
-      SPRING_PROFILES_ACTIVE: dev
-    depends_on:
-      - keycloak
+#  spring-app:
+#    build: .
+#    container_name: spring-keycloak-demo
+#    ports:
+#      - "8088:8088"
+#    environment:
+#      SPRING_PROFILES_ACTIVE: dev
+#    depends_on:
+#      - keycloak
